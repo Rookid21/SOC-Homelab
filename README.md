@@ -3,6 +3,9 @@
 ## 📌 Project Overview
 This repository documents the architecture, deployment, and ongoing operations of my Security Operations Center (SOC) and network infrastructure homelab. The goal of this project is to simulate a production environment to practice infrastructure management, defensive security operations, log aggregation, and engineering custom detection alerts.
 
+<img width="987" height="511" alt="image" src="https://github.com/user-attachments/assets/395587d8-9946-4866-a880-41c8e7584d0a" />
+
+
 ### 🚀 Core Capabilities
 * **Layered Network Security:** Segregated VLANs managed via an OPNsense firewall with strict inter-VLAN routing rules, enforcing network segmentation and least privilege network access
 * **Centralized Log Aggregation:** Centralized log collection (Firewall, Network Switches, NAS, and Endpoints) routing through Elastic Agents to SIEM.
@@ -28,10 +31,10 @@ The environment is hosted on a Proxmox VE hypervisor and segmented into isolated
 | Zone / VLAN | Description | Key Assets |
 | :--- | :--- | :--- |
 | **Management** | Core infrastructure management interfaces | Proxmox VE, OPNsense WebUI, Unifi Switch (Only Secure VPN can access) |
-| **Server** | Identity and centralized storage | `DC01` (Active Directory), Synology NAS |
-| **Security/SOC** | SIEM, monitoring, and analysis tools | Security Onion (ELK), Wazuh Manager |
+| **Server** | Identity, centralized storage, and Security | `DC01` (Active Directory), Synology NAS, Security Onion (ELK), Wazuh Manager|
 | **DMZ Zone**| Outwards facing Servers | Webserver & Minecraft Server) |
-| **Prod**| User simulation and endpoint testing | Windows/Linux Workstations with Wazuh Agents |
+| **LAN**| User simulation and endpoint testing | Windows/Linux Workstations with Wazuh Agents |
+| **Vulnerability Testing**| Vulnerability Scanning | Metasploit and Nessus |
 
 
 
