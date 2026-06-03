@@ -9,6 +9,7 @@ This repository documents the architecture, deployment, and ongoing operations o
 * **SIEM & EDR Integration:** Threat detection utilizing Security Onion (ELK Stack) and Wazuh EDR through alerting and log investigation. 
 * **Attack Simulation:** An Active Directy on-prem domain with endpoints domained joined, used to mimic enterprise infrastructure and create attack scenearios. 
 
+
 ## 🛠️ The Tech Stack
 * **Hypervisor:** Proxmox VE
 * **Firewall/Routing:** OPNsense & Wireguard VPN
@@ -21,7 +22,7 @@ This repository documents the architecture, deployment, and ongoing operations o
 * **Storage:** Synology NAS (NFS)
 
 
-### Network Segmentation (VLANs)
+## Network Segmentation (VLANs)
 The environment is hosted on a Proxmox VE hypervisor and segmented into isolated security zones via **OPNsense** to enforce the principle of least privilege:
 
 | Zone / VLAN | Description | Key Assets |
@@ -33,11 +34,13 @@ The environment is hosted on a Proxmox VE hypervisor and segmented into isolated
 | **Prod**| User simulation and endpoint testing | Windows/Linux Workstations with Wazuh Agents |
 
 
+
 ## 🚨 Custom Detections & Alert Engineering
 A major focus of this lab is creating custom detection rules within ELK stack to detect and monitor any malicious activity.
 
 Current detection engineering use cases implemented:
 * **New User or Group Created:** Alerts for any new users or groups added onto my Linux or Windows Server/Endpoints.
+
 
 
 ## 🔮 Future Roadmap
