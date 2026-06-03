@@ -1,0 +1,1 @@
+data_stream.dataset : "wazuh.alert" AND rule.id : "5901" 
